@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Neuroscience</title>
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: #e2ded7;
+    --accent: #7c4a2d;
+    --accent-soft: #f0e9e2;
+    --max: 720px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Georgia", "Times New Roman", serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  /* Header */
+  header { padding: 88px 0 56px; }
+  .name-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 16px;
+  }
+  .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    background: var(--accent-soft);
+    flex-shrink: 0;
+  }
+  .eyebrow {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 44px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .lede { font-size: 19px; color: var(--muted); max-width: 56ch; }
+  .lede a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--accent); }
+
+  /* Nav */
+  nav {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    margin-top: 32px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  nav a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+  nav a:hover { color: var(--accent); }
+
+  /* Sections */
+  section { padding: 40px 0; border-top: 1px solid var(--line); }
+  .section-label {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  p { margin-bottom: 16px; }
+  p:last-child { margin-bottom: 0; }
+
+  /* Publications / project list */
+  .entry { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .entry:last-child { border-bottom: none; }
+  .entry-title { font-size: 18px; margin-bottom: 4px; }
+  .entry-title a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+  .entry-title a:hover { border-color: var(--accent); }
+  .entry-meta {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .entry-meta .venue { color: var(--accent); }
+
+  /* Contact */
+  .links { display: flex; gap: 14px; flex-wrap: wrap; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 14px; }
+  .links a {
+    color: var(--ink);
+    text-decoration: none;
+    padding: 7px 16px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .links a:hover { background: var(--accent-soft); border-color: var(--accent); }
+
+  footer {
+    padding: 48px 0 64px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 56px 0 40px; }
+    .name-row { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .avatar { width: 84px; height: 84px; }
+    h1 { font-size: 34px; }
+    .lede { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="name-row">
+      <img class="avatar" src="profile.jpg" alt="Your Name">
+      <div>
+        <div class="eyebrow">Neuroscience · Princeton University</div>
+        <h1>Your Name</h1>
+      </div>
+    </div>
+    <p class="lede">PhD student studying how neural circuits give rise to behavior. I work in the <a href="#">Lab Name</a>, where I combine electrophysiology, imaging, and computational modeling.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="section-label">About</div>
+    <p>I'm a doctoral student in the Princeton Neuroscience Institute. My research asks how populations of neurons encode and transform information during decision-making, using a mix of in-vivo recordings and dynamical-systems analysis.</p>
+    <p>Before Princeton I completed my undergraduate degree at [University], where I worked on [topic]. Outside the lab I [interest / hobby].</p>
+  </section>
+
+  <section id="research">
+    <div class="section-label">Research Interests</div>
+    <p>My work sits at the intersection of systems neuroscience and computation. Broadly, I'm interested in:</p>
+    <div class="entry">
+      <div class="entry-title">Neural dynamics of decision-making</div>
+      <div class="entry-meta">How recurrent circuits accumulate evidence over time.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Population coding</div>
+      <div class="entry-meta">Geometry of neural representations across brain regions.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Computational modeling</div>
+      <div class="entry-meta">Bridging recordings and theory with RNNs and latent-variable models.</div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="section-label">Publications</div>
+    <div class="entry">
+      <div class="entry-title"><a href="#">Title of your first paper goes here</a></div>
+      <div class="entry-meta">Your Name, Coauthor A, Coauthor B · <span class="venue">Journal Name</span>, 2025</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="#">Title of an earlier paper or preprint</a></div>
+      <div class="entry-meta">Coauthor A, Your Name · <span class="venue">bioRxiv</span>, 2024</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="#">Conference abstract or poster</a></div>
+      <div class="entry-meta">Your Name et al. · <span class="venue">SfN Annual Meeting</span>, 2024</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-label">Contact</div>
+    <p>Reach me at <strong>yourname@princeton.edu</strong>, or find me here:</p>
+    <div class="links">
+      <a href="mailto:yourname@princeton.edu">Email</a>
+      <a href="#">Google Scholar</a>
+      <a href="#">GitHub</a>
+      <a href="#">Twitter / X</a>
+      <a href="#">CV (PDF)</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Your Name · Built with care, hosted on GitHub Pages
+  </footer>
+
+</div>
+</body>
+</html>
